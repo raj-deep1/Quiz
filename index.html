@@ -15,6 +15,9 @@
       <p id="errorMsg" class="error"></p>
     </form>
 
+     //user name
+
+
       <form id="loginForm">
   <label for="username">नाम दर्ज करें:</label>
   <input type="text" id="username" required />
@@ -23,16 +26,6 @@
 :contentReference[oaicite:9]{index=9}
 
 
-```javascript
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const username = document.getElementById('username').value.trim();
-  if (username) {
-    localStorage.setItem('quizUser', username);
-    window.location.href = 'quiz.html';
-  }
-});
-:contentReference[oaicite:12]{index=12}
 
 
   </div>
