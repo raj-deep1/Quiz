@@ -27,7 +27,7 @@ let currentQuestion = 0;
 let userAnswers = [];
 
 async function loadQuestions() {
-    const response = await fetch(https://docs.google.com/spreadsheets/d/1ym1RQBP6VoCdRPSDqs51F3Tb-Y2whpoQ9cmEVlpalVk/edit?gid=0#gid=0);
+    const response = await fetch('https://docs.google.com/spreadsheets/d/1ym1RQBP6VoCdRPSDqs51F3Tb-Y2whpoQ9cmEVlpalVk/edit?gid=0#gid=0');
     const data = await response.text();
     const questions = Papa.parse(data, {header: true}).data;
     
