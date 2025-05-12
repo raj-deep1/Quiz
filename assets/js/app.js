@@ -1,3 +1,24 @@
+
+function login() {
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const message = document.getElementById('message');
+
+    if (email === "rajdeep" && password === "87654321") {
+        message.style.color = "green";
+        message.innerText = "लॉगिन सफल! ✅";
+        // Redirect if needed
+        // window.location.href = "dashboard.html"; 
+    } else {
+        message.style.color = "red";
+        message.innerText = "गलत ईमेल या पासवर्ड ❌";
+    }
+}
+
+
+
+
+
 // Google Sheet से डेटा फ़ेच करें
 const sheetURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRYYI39qzZkx-ovaTDoWTTrX5hS5hyoGPyUPYhaCUWar2pva55tISp1wMG-dCW7DnawJrK9sjdI1F3F/pub?gid=0&single=true&output=csv';
 
