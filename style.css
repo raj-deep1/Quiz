@@ -98,6 +98,24 @@ body {
 .results h3 {
   color: #5563DE;
 }
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #e60000;
+}
+
 .results ul {
   text-align: left;
   display: inline-block;
