@@ -93,3 +93,7 @@ function loadResults() {
 if(window.location.pathname.includes('result.html')) {
     loadResults();
 }
+
+// CORS Proxy के साथ URL
+const proxy = 'https://cors-anywhere.herokuapp.com/';
+const sheetURL = `${proxy}https://docs.google.com/.../pub?output=csv`;
