@@ -78,15 +78,7 @@ document.getElementById('logoutBtn').addEventListener('click', () => {
   // उपयोगकर्ता को लॉगिन पेज पर पुनः निर्देशित करें
   window.location.href = 'index.html';
 });
-document.addEventListener('DOMContentLoaded', () => {
-  const logoutBtn = document.getElementById('logoutBtn');
-  if (logoutBtn) {
-    logoutBtn.addEventListener('click', () => {
-      // लॉगआउट लॉजिक
-      window.location.href = 'index.html';
-    });
-  }
-});
+
 document.addEventListener('click', function(event) {
   if (event.target && event.target.id === 'logoutBtn') {
     // लॉगआउट लॉजिक
