@@ -7,6 +7,7 @@ function login() {
     if (email === "rajdeep" && password === "87654321") {
         message.style.color = "green";
         message.innerText = "लॉगिन सफल! ✅";
+        window.location.href = "index.html";
         // Redirect if needed
         // window.location.href = "dashboard.html"; 
     } else {
