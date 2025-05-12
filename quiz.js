@@ -87,3 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+document.addEventListener('click', function(event) {
+  if (event.target && event.target.id === 'logoutBtn') {
+    // लॉगआउट लॉजिक
+    window.location.href = 'index.html';
+  }
+});
