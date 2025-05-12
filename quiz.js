@@ -70,3 +70,11 @@ document.getElementById('submitBtn').addEventListener('click', () => {
   resultsHTML += '</ul></div>';
   document.querySelector('.quiz-container').innerHTML = resultsHTML;
 });
+document.getElementById('logoutBtn').addEventListener('click', () => {
+  // उपयोगकर्ता के उत्तर साफ़ करें (यदि आवश्यक हो)
+  userAnswers = [];
+  // क्विज़ कंटेनर को रीसेट करें (यदि आवश्यक हो)
+  document.getElementById('quiz').innerHTML = '';
+  // उपयोगकर्ता को लॉगिन पेज पर पुनः निर्देशित करें
+  window.location.href = 'index.html';
+});
