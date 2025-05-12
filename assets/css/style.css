@@ -1,134 +1,105 @@
-:root {
-    --primary: #6366f1;
-    --secondary: #4f46e5;
-    --accent: #f59e0b;
-}
-
+/* Common styles for both pages */
 body {
-    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #74ABE2 0%, #5563DE 100%);
+  color: #333;
 }
 
-.auth-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+/* Login page styles */
+.login-container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #5563DE;
+}
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background: #5563DE;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.login-container button:hover {
+  background: #3b4db5;
+}
+.error {
+  color: red;
+  font-size: 0.9em;
 }
 
-.login-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 1.5rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    width: 400px;
-}
-
+/* Quiz page styles */
 .quiz-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
+  max-width: 800px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
-.question-box {
-    background: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+.question-text {
+  font-size: 1.2em;
+  margin-bottom: 15px;
 }
-
 .options {
-    display: grid;
-    gap: 1rem;
-    margin-top: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+.options li {
+  margin: 8px 0;
+}
+.options input {
+  margin-right: 10px;
+}
+.nav-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-buttons button {
+  padding: 10px 20px;
+  background: #5563DE;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.nav-buttons button:hover {
+  background: #3b4db5;
+}
+#submitBtn {
+  background: #28a745;
+}
+#submitBtn:hover {
+  background: #1e7e34;
 }
 
-.option-item {
-    padding: 1rem;
-    border: 2px solid #e5e7eb;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+/* Results page styles */
+.results {
+  text-align: center;
 }
-
-.option-item:hover {
-    transform: translateY(-2px);
-    border-color: var(--primary);
+.results h3 {
+  color: #5563DE;
 }
-
-.progress-bar {
-    height: 8px;
-    background: #e5e7eb;
-    border-radius: 4px;
-    margin: 1rem 0;
-}
-
-.progress {
-    height: 100%;
-    background: var(--primary);
-    border-radius: 4px;
-    transition: width 0.3s ease;
-}
-
-
-/* Result Page Styles */
-.result-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: white;
-    border-radius: 1.5rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.score-card {
-    text-align: center;
-    margin: 2rem 0;
-}
-
-.score-circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #4CAF50, #45a049);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-    font-size: 2rem;
-    box-shadow: 0 5px 15px rgba(76,175,80,0.3);
-}
-
-.answer-item {
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 0.5rem;
-    border-left: 4px solid;
-}
-
-.correct-answer {
-    background: #e8f5e9;
-    border-color: #4CAF50;
-}
-
-.wrong-answer {
-    background: #ffebee;
-    border-color: #f44336;
-}
-
-.retry-btn {
-    background: #2196F3;
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    display: block;
-    margin: 2rem auto;
-    transition: transform 0.3s ease;
-}
-
-.retry-btn:hover {
-    transform: translateY(-2px);
+.results ul {
+  text-align: left;
+  display: inline-block;
+  margin-top: 20px;
 }
