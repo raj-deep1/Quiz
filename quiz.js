@@ -85,3 +85,19 @@ document.addEventListener('click', function(event) {
     window.location.href = 'index.html';
   }
 });
+//new
+function renderQuizResults() {
+  // क्विज़ परिणाम रेंडर करें
+  document.getElementById('quizContainer').innerHTML = `
+    <button id="logoutBtn">Logout</button>
+    <!-- अन्य परिणाम -->
+  `;
+
+  // लॉगआउट बटन पर इवेंट लिस्नर पुनः जोड़ें
+  const logoutBtn = document.getElementById('logoutBtn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+  }
+}
