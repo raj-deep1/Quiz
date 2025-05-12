@@ -3,7 +3,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
   var username = document.getElementById('username').value.trim();
   var password = document.getElementById('password').value.trim();
   // Dummy validation: accept only a specific user for demo
-  if (username === 'user' && password === 'pass') {
+  if (username === 'Arti' && password === 'Arti2025') {
     // Redirect to quiz page on successful login
     window.location.href = 'quiz.html';
   } else {
