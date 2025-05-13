@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Design Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Pacifico&family=Rubik+Scribble&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papm0C0+5iBO0liRh0l35bE9StbWfLzKfez2A+3DshxKNH8bqEVkFjFRV7CmXZ7F5oq7NzpvC9P3+dVOCRrl7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: linear-gradient(to bottom, #a1e3ff, #52c7dd);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      background-color: white;
+      width: 90%;
+      max-width: 1200px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .navbar {
+      background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a6c1ee);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.3rem 1rem;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #003366;
+    }
+    .nav-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #003366;
+    }
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+    }
+    .nav-menu li a {
+      text-decoration: none;
+      color: #0077aa;
+      font-weight: 500;
+      transition: background 0.3s, color 0.3s;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+    .nav-menu li a i {
+      margin-right: 6px;
+      color: black;
+    }
+    .nav-menu li a:hover {
+      background-color: #0077aa;
+      color: white;
+    }
+    .get-started {
+      background-color: #2a3b5e;
+      color: white !important;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .get-started:hover {
+      background-color: #1b2847;
+    }
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .left {
+      flex: 1 1 300px;
+    }
+    .left h1 {
+      font-size: 2.5rem;
+      color: #003366;
+    }
+    .left p {
+      margin: 1rem 0;
+      color: #444;
+      max-width: 500px;
+    }
+    .left button {
+      background-color: #0099cc;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .left button:hover {
+      background-color: #0077aa;
+    }
+    .social-icons {
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      margin-right: 1rem;
+      color: #003366;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+    .social-icons a i {
+      color: black;
+    }
+    .social-icons a:hover {
+      color: #0077aa;
+    }
+    .right {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .right img {
+      max-width: 100%;
+      height: auto;
+    }
+    .footer-slider {
+      width: 100%;
+      overflow: hidden;
+      margin-top: 1rem;
+      background: #fff;
+      padding: 1rem 0;
+    }
+    .slider-track {
+      display: flex;
+      animation: scroll 20s linear infinite;
+      width: fit-content;
+    }
+    .slider-track img {
+      height: 60px;
+      margin: 0 2rem;
+    }
+    .footer-info {
+      text-align: center;
+      padding: 1rem;
+      background: linear-gradient(to right, #a8e063, #56ab2f);
+      color: #006600;
+      font-size: 1rem;
+      font-weight: normal;
+      letter-spacing: 0.5px;
+    }
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 1rem;
+      }
+      .nav-menu.active {
+        display: flex;
+      }
+      .nav-toggle {
+        display: block;
+      }
+      .content {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo">LOGO</div>
+      <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="#"><i class="fas fa-info-circle"></i>About Us</a></li>
+        <li><a href="#"><i class="fas fa-cogs"></i>Services</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i>Contact Us</a></li>
+        <li><a href="#" class="get-started"><i class="fas fa-play"></i>GET STARTED</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div class="left">
+        <h1>Web Design <br><span style="color: #00b8d9">Landing Page</span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button>Learn More</button>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="right">
+        <img src="4107802b-cbb1-4904-9a2e-ee5429b0e018.png" alt="Web Design Illustration">
+      </div>
+    </div>
+    <div class="footer-slider">
+      <div class="slider-track">
+        <img src="868446f0-212d-44be-994f-a3800826718e.png" alt="Gov Logos">
+        <img src="868446f0-212d-44be-994f-a3800826718e.png" alt="Gov Logos">
+      </div>
+    </div>
+    <div class="footer-info">
+      © Supaul , Developed and hosted by Rajdeep Yadav, Contact - 9473287701 | <span id="currentDate"></span>
+    </div>
+  </div>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('active');
+    }
+    // Set current date
+    document.getElementById('currentDate').textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>
